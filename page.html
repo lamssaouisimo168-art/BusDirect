@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusDirect</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- font html link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">  
+   <link rel="stylesheet" href="https://www.flamingtext.com/net-fu/jobs/30073021737734171.html"> 
+   
+</head>
+<body class="bg-gray-300">
+  <!--L'en-tête-->
+ <header class="bg-white border-b border-blue-200 p-7 flex items-center gap-2">
+  
+  <img class="w-8 h-8 ml-10" src="pixels/front-of-bus.png" alt="bus"><h1>BusDirect</h1>
+  <span class="size-4 rounded-full border-2 bg-green-600 ml-auto"></span><p>siège disponible</p>
+  <span class="size-4 rounded-full border-2 bg-red-600"></span><p>sièges non disponibles</p>
+  <details class="relative">
+    <summary class="flex items-center gap-2 rounded-md bg-slate-900 px-3 py-2 text-white cursor-pointer list-none">
+      <img src="https://i.pravatar.cc/100" class="w-7 h-7 rounded-full"> Admin (Abdou) ⌄
+    </summary>
+    <div class="absolute top-full mt-2 w-48 rounded-md bg-white py-1 shadow-lg z-10">
+      <a href="#" class="block px-4 py-2 hover:bg-slate-100">⚙️ Paramètres</a>
+      <a href="#" class="block px-4 py-2 text-red-600 hover:bg-slate-100">🚪 Déconnexion</a>
+    </div>
+  </details>
+</header>
+<main>
+<div class="bg-blue-600 text-white rounded-xl px-5 py-3 flex items-center gap-6 shadow-lg">
+
+  <!-- 1. Bus + trajet -->
+  <div class="flex items-center gap-3 pr-6 border-r border-white/30">
+    <img class="h-12 w-auto" src="pixels/bus.webp" alt="Bus blanc">
+    <div>
+      <h2 class="text-xl font-bold flex items-center gap-2">
+        Safi
+        <i class="fa-solid fa-arrow-right text-base"></i>
+        Marrakech
+      </h2>
+      <p class="text-xs text-white/80 flex items-center gap-1">
+        Safi <i class="fa-solid fa-arrow-right text-[10px]"></i> Marrakech, Morocco
+      </p>
+    </div>
+  </div>
+
+  <!-- 2. Départ -->
+  <div class="flex items-center gap-3 pr-6 border-r border-white/30">
+    <img class="h-12 w-auto rounded-md" src="pixels/dipart.png" alt="Bus bleu">
+    <div>
+      <p class="text-sm text-white/80">Départ</p>
+      <p class="font-semibold">14:30 - Aujourd'hui</p>
+    </div>
+  </div>
+
+
+  <!-- 4. Places disponibles -->
+  <div class="text-center pr-6 border-r border-white/30">
+    <p class="text-2xl font-bold leading-none">15 / 20</p>
+    <p class="text-xs text-white/80 mt-1">Places Disponibles</p>
+  </div>
+
+  <!-- 5. Revenu total -->
+  <div class="text-center ml-auto">
+    <p class="text-xs text-white/80">Revenu Total:</p>
+    <p class="text-xl font-bold">1600 DH</p>
+  </div>
+
+</div>
+<div class="board" id="board"></div>
+</main> 
+
+  <!--Navigation du Siteweb-->
+  <div>
+    <div class="grid gap-3 container box-border p-3">
+      <div class="box1">seat 1</div>
+      <div class="box1">seat 2</div>
+      <div class="box1">seat 3</div>
+      <div class="box1">seat 4</div>
+      <div class="box1">seat 6</div>
+      <div class="box1">seat 7</div>
+      <div class="box1">seat 8</div>
+      <div class="box1">seat 9</div>
+      <div class="box1">seat 10</div>
+      <div class="box1">seat 11</div>
+      <div class="box1">seat 12</div>
+      <div class="box1">seat 13</div>
+      <div class="box1">seat 14</div>
+      <div class="box1">seat 15</div>
+      <div class="box1">seat 16</div>
+      <div class="box1">seat 17</div>
+      <div class="box1">seat 18<8/div>
+      <div class="box1">seat 19</div>
+      <div class="box1">seat 20</div>
+    </div>
+  </div>
+
+
+  <script>
+    const btn = document.getElementById('userBtn');
+    const menu = document.getElementById('userMenu');
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = menu.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+
+  </script>
+</body>
+</html>
