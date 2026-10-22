@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,6 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body class="bg-gray-100">
   <header class="bg-white border-b border-blue-200 p-4 md:p-7 flex flex-wrap items-center gap-3">
     <img class="w-8 h-8" src="pixels/front-of-bus.png" alt="Bus">
@@ -39,53 +39,53 @@
         <div><p class="text-sm text-white/80">Départ</p><p class="font-semibold">14:30 - Aujourd'hui</p></div>
       </div>
       <div class="text-center pr-6">
-        <p class="text-2xl font-bold leading-none">15 / 20</p>
+        <p id="totalplaces" class="text-2xl font-bold leading-none">15 / 20</p>
         <p class="text-xs text-white/80 mt-1">Places disponibles</p>
       </div>
       <div class="text-center ml-auto">
         <p class="text-xs text-white/80">Revenu total</p>
-        <p class="text-xl font-bold">400 DH</p>
-        <p class="text-sm">Prix du ticket : 80 DH</p>
+        <p id="totalamount" class=" text-xl font-bold">1200 DH</p>
+        <p id="ticket-price" class="text-sm">Prix du ticket : 80 DH</p>
       </div>
     </div>
 
     <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
-      <section class="bg-white rounded-xl p-5 shadow-sm">
+      <section class="  bg-white rounded-xl p-5 shadow-sm">
         <h2 class="text-2xl font-bold mb-4">Plan de la cabine</h2>
         <div id="board" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 1</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 2</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 3</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 4</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 5</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 6</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 7</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 8</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 9</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 10</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 11</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 12</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 13</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 14</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 15</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 16</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 17</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 18</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 19</div>
-          <div class="border border-gray-300 bg-white rounded-lg p-4 text-center font-semibold">Siège 20</div>
+          <div class=" seat1 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="1">Siège 1</div>
+          <div class=" seat2 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="2">Siège 2</div>
+          <div class=" seat3 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="3">Siège 3</div>
+          <div class=" seat4 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="4">Siège 4</div>
+          <div class=" seat5 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="5">Siège 5</div>
+          <div class=" seat6 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="6">Siège 6</div>
+          <div class=" seat7 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="7">Siège 7</div>
+          <div class=" seat8 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="8">Siège 8</div>
+          <div class=" seat9 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="9">Siège 9</div>
+          <div class=" seat10 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="10">Siège 10</div>
+          <div class=" seat11 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="11">Siège 11</div>
+          <div class=" seat12 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="12">Siège 12</div>
+          <div class=" seat13 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="13">Siège 13</div>
+          <div class=" seat14 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="14">Siège 14</div>
+          <div class=" seat15 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="15">Siège 15</div>
+          <div class=" seat16 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="16">Siège 16</div>
+          <div class=" seat17 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="17">Siège 17</div>
+          <div class=" seat18 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="18">Siège 18</div>
+          <div class=" seat19 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="19">Siège 19</div>
+          <div class=" seat20 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="20">Siège 20</div>
         </div>
       </section>
 
       <div class="space-y-6">
         <section class="bg-white rounded-xl p-5 border border-gray-200">
           <h2 class="text-2xl font-bold mb-4">Formulaire de réservation</h2>
-          <form action="#" method="get" class="flex flex-col gap-4">
+          <form id="Réserver" method="get" method="get" class="flex flex-col gap-4">
             <div class="flex flex-col gap-2">
               <label class="font-semibold" for="name">Nom du passager</label>
               <input class="border-2 rounded-xl p-3 w-full" type="text" id="name" name="name" placeholder="Entrer votre nom" required>
             </div>
-            <div class="flex flex-col gap-2">
-              <label class="font-semibold" for="seat-number">Choisir une chaise</label>
+            <div   class="flex flex-col gap-2">
+              <label id="seatSelect" class="font-semibold" for="seat-number">Choisir une chaise</label>
               <select class="border-2 rounded-xl p-3 w-full" id="seat-number" name="seat-number">
                 <option value="">Premier siège libre</option>
                 <option value="1">Siège 1</option>
@@ -115,9 +115,9 @@
           <p class="text-sm text-gray-500 mt-3">Le nom du passager est obligatoire.</p>
         </section>
 
-        <section class="bg-white rounded-xl p-5 border border-gray-200">
+        <section id="newSeatSelect" class="bg-white rounded-xl p-5 border border-gray-200">
           <h2 class="text-2xl font-bold mb-4">Modifier une réservation</h2>
-          <form action="#" class="flex flex-col gap-4">
+          <form id="Modifier" method="get" class="flex flex-col gap-4">
             <div class="flex flex-col gap-2">
               <label for="passenger-edit" class="font-semibold">Choisir un passager</label>
               <select id="passenger-edit" name="passenger-edit" class="border-2 rounded-xl p-3 w-full">
@@ -158,9 +158,9 @@
           </form>
         </section>
 
-        <section class="bg-white rounded-xl p-5 border border-gray-200">
+        <section id="canceling" class="bg-white rounded-xl p-5 border border-gray-200">
           <h2 class="text-2xl font-bold mb-4">Annuler une réservation</h2>
-          <form action="#" class="flex flex-col gap-4">
+          <form id="Annuler" method="get" class="flex flex-col gap-4">
             <label for="passenger-delete" class="font-semibold">Choisir un passager</label>
             <select id="passenger-delete" name="passenger-delete" class="border-2 rounded-xl p-3 w-full">
               <option value="">Sélectionner un passager</option>
@@ -168,15 +168,11 @@
             <button type="submit" class="bg-red-600 text-white font-bold rounded-xl p-3 hover:bg-red-700">Annuler la réservation</button>
           </form>
         </section>
-
-        <section class="bg-white rounded-xl p-5 border border-gray-200">
-          <h2 class="text-xl font-bold mb-3">Messages</h2>
-          <div class="bg-green-100 text-green-800 rounded-lg p-3 mb-3">Exemple : réservation réussie.</div>
-          <div class="bg-red-100 text-red-800 rounded-lg p-3">Exemple : veuillez vérifier les informations.</div>
-        </section>
       </div>
     </div>
+    
   </main>
+  <script src="page.js"> </script>
+</body>
 </body>
 </html>
-```
