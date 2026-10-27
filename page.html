@@ -9,11 +9,11 @@
 
 </head>
 <body>
-<header class=" align-baseline border-2 bg-gray-300 border-black rounded-2xl flex h-25 w-5x mx-auto">
+<header class="border-2 bg-gray-300 border-black rounded-2xl flex flex-wrap items-center h-auto w-full p-3 gap-3">
   <img class="ml-1.5 w-30" src="pixels/bus.webp" alt="">
   <h1 class=" text-3xl font-bold mt-6 ml-11">BusDirect</h1>
 <div class="flex items-center gap-3">
-  <h1 class=" reservation text-2xl font-semibold  ml-300 text-blue-600">Réservation</h1>
+  <h1 class="reservation text-xl md:text-2xl font-semibold text-blue-600">Réservation</h1>
   <h1 class=" tickets text-2xl ml-5">tickets</h1>
 
     <span class="flex h-4 w-4 items-center justify-center rounded-full bg-blue-100 text-xs text-blue-700">
@@ -41,10 +41,10 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-3 xl:grid-cols-2 gap-6">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
     <section class="  bg-white rounded-xl p-5 shadow-sm">
     <h2 class="text-2xl font-bold mb-4">Plan de la cabine</h2>
-         <div id="board" class="grid grid-cols-1 xl:grid-cols-2 sm:grid-cols-4 gap-3">
+         <div id="board" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <div class=" seat1 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="1">Siège 1</div>
           <div class=" seat2 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="2">Siège 2</div>
           <div class=" seat3 border border-black-300 bg-green-400 rounded-2xl p-4 text-center font-bold" data-seat="3">Siège 3</div>
@@ -69,7 +69,7 @@
       </section>
 
    <div class="space-y-6">
-        <section class="bg-white rounded-xl p-5 border border-gray-200">
+        <section class="modifier bg-white rounded-xl p-5 border border-gray-200">
           <h2 class="text-2xl font-bold mb-4">Formulaire de réservation</h2>
           <form id="Réserver" method="get" method="get" class="flex flex-col gap-4">
             <div class="flex flex-col gap-2">
@@ -103,16 +103,17 @@
               </select>
             </div>
             <button class="bg-blue-600 text-white font-bold rounded-xl p-3 hover:bg-green-700" type="submit">Réserver</button>
+            <div id="message" class=" reuissir  relative 3000 text-center  right-5 text-green-600 font-bold bg-gray-400  rounded-xl "></div>
           </form>
-          <p class="text-sm text-gray-500 mt-3">Le nom du passager est obligatoire.</p>
         </section>
-<section id="newSeatSelect" class="bg-white rounded-xl p-5 border border-gray-200">
-          <h2 class="text-2xl font-bold mb-4">Modifier une réservation</h2>
+      <section
+            id="newSeatSelect" class="bg-white rounded-xl p-5 border border-gray-200">
+          <h2 class="text-2xl font-bold mb-4" >Modifier une réservation</h2>
           <form id="Modifier" method="get" class="flex flex-col gap-4">
             <div class="flex flex-col gap-2">
-              <label for="passenger-edit" class="font-semibold">Choisir un passager</label>
-              <select id="passenger-edit" name="passenger-edit" class="border-2 rounded-xl p-3 w-full">
-                <option value="">Sélectionner un passager</option>
+              <label for="name2" class="font-semibold">Passanger à modifier</label>
+              <select id="name2" name="name2" class="border-2 rounded-xl p-3 w-full">
+                <option value ="">Choisir un passanger</option>
               </select>
             </div>
             <div class="flex flex-col gap-2">
@@ -145,7 +146,8 @@
                 <option value="20">Siège 20</option>
               </select>
             </div>
-            <button type="submit" class="bg-orange-500 text-white font-bold rounded-xl p-3 hover:bg-green-700">Modifier</button>
+            <button type="submit" class="bg-orange-500 text-white font-bold rounded-xl p-3 hover:bg-green-700" id="btn-modifier">Modifier</button>
+        
           </form>
         </section>
 
@@ -164,7 +166,11 @@
 
   </div>
 </div>
-<div id="message" class="fixed bottom-5 right-5 text-red-600 font-bold bg-white shadow-lg rounded-xl p-4"></div>
+
+<footer class = "border border-amber-600 w-full h-20 bg-emerald-500 justify-center">
+  <h1 class="font-semibold text-center  ">BusDirect</h1>
+
+</footer>
   <script src="page.js"></script>
 </body>
 </html>

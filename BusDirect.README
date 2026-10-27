@@ -1,0 +1,21 @@
+# BusDirect
+
+## Description
+BusDirect est une application de réservation de sièges de bus.
+
+## Fonctionnalités
+- Afficher les 20 sièges du bus.
+- Réserver un siège avec le nom du passager.
+- Modifier une réservation.
+- Annuler une réservation.
+- Afficher les sièges libres et occupés.
+- Afficher le nombre de sièges libres et le montant total.
+
+## Technologies
+- HTML
+- CSS / Tailwind CSS
+- JavaScript (DOM)
+
+## Installation
+1. Télécharger le projet.
+2. Ouvrir le fichier `index.html` dans le navigateur.
